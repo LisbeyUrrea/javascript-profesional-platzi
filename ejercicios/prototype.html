@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    Prototipos
+
+    <script>
+      function Hero(name) {
+        // const hero = Object.create(Hero.prototype);
+        // hero.name = name;
+        this.name = name;
+
+        // return this;
+      }
+
+      Hero.prototype.saludar = function() {
+        console.log(`Hola  soy un New ${this.name}`);
+      };
+
+      const lisbey = new Hero("Lisbey");
+      lisbey.saludar();
+
+      const pedro = new Hero("Pedro");
+      pedro.saludar();
+    </script>
+  </body>
+</html>
